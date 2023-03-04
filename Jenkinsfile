@@ -1,5 +1,5 @@
 node {
-    def WORKSPACE = "/var/lib/jenkins/workspace/springbootapplication"
+    def WORKSPACE = "/var/lib/jenkins/workspace/springbootapplication_main"
     def dockerImageTag = "springbootapplication${env.BUILD_NUMBER}"
 try{
     notifyBuild('STARTED')
