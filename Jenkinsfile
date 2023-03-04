@@ -8,6 +8,7 @@ pipeline {
     }
     stage('Docker Build') {
             steps {
+                sh 'mkdir -p docker'
                 sh 'docker build -t detector .'
             }
         }
