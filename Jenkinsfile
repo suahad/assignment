@@ -7,6 +7,8 @@ try{
         // for display purposes
         // Get some code from a GitHub repository
         git url: 'https://github.com/suahad/assignment.git',
+            credentialsId: 'AKIA5TG72EOS53USA2GE',
+            branch: 'main'
             
      }
     stage('Build docker') {
