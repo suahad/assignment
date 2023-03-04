@@ -27,6 +27,9 @@ public class SuspiciousEventsServiceTest {
         ObjectMapper mapper = new ObjectMapper();
         List<UnauthorizedUser> expectedUnauthorizedResponse = mapper.readValue(new URL("file:src/test/resources/service/unauthorized_users_response.json"), new TypeReference<List<UnauthorizedUser>>(){});
         List<UnauthorizedUser> actualUnauthorizedResponse = suspiciousEventsService.getUnauthorizedRequests("\"isAuthorized\": true", 3);
+        for(UnauthorizedUser user : actualUnauthorizedResponse){
+            System.out.println(user);
+                  }
 
         assertNotNull(expectedUnauthorizedResponse);
         assertNotNull(actualUnauthorizedResponse);
